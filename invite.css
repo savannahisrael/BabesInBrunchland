@@ -1,0 +1,29 @@
+#editTextCol {
+    background-color: whitesmoke; 
+}
+
+h3 {
+    color: steelblue;
+    font-family: 'Old Standard TT', serif;
+}
+
+#floralTextDiv {
+    position: absolute;
+    margin-top: -75px;
+}
+
+#eggTextDiv {
+    margin-top: 325px;
+    position: absolute;
+}
+
+#foodTextDiv {
+    position: absolute;
+    margin-top: 360px;
+}
+
+#bubblyTextDiv {
+    position: absolute;
+    margin-top: 400px;
+    color: white;
+}
