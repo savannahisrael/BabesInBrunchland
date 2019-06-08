@@ -53,6 +53,12 @@ form {
     color: black;
 }
 
+.closer:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
+}
+
 .bellhop:hover {
     cursor: url("images/mouse-glass.png"), default !important;
     background-color: palevioletred;
@@ -123,6 +129,7 @@ form {
     cursor: url("images/mouse-glass.png"), default !important;
     background-color: palevioletred;
     color: black;
+    
 }
 
 .btn-primary {
