@@ -24,6 +24,12 @@ h3 {
 
 #bubblyTextDiv {
     position: absolute;
-    margin-top: 400px;
+    margin-top: 415px;
     color: white;
+}
+
+.bellhop:hover {
+    cursor: url("images/mouse-glass.png"), default !important;
+    background-color: palevioletred;
+    color: black;
 }
