@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create An Invite</title>
+    <!-- Share This Buttons -->
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5cf833fc4351e9001264f74e&product=inline-share-buttons' async='async'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Lobster|Roboto+Condensed:300|Roboto+Slab:300|Rochester&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="inviteStyle.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+            <div class="jumbotron jumbotron-fluid text-center" id="brunch-header">
+                <h1 class="text-center"><strong>Babes In Brunchland</strong></h1>
+            </div>
+        </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Choose Your Style -->
+            <div class="col-md-3 col-sm-12">
+                <!-- Card With Title and 4 Thumbnail Buttons -->
+
+
+            </div>
+
+            <!-- Customize The Text -->
+            <div class="col-md-6 col-sm-12" id="editTextCol">
+                <!-- Title -->
+                <h3 class="text-center" style="color: whitesmoke; padding-top: 5%">Customize The Text</h3>
+                <!-- Floral Invite -->
+                <div class="card" id="floralInvite" style="max-width: 450px; min-width: 300px;">
+                        <img src="floralInvite.png" class="card-img" alt="floral invitation">
+                        <div class="card-img-overlay">
+                            <div contenteditable="true" id="floralTextDiv" style="width: 100%; height: 40%;">
+                                <div id="floralJoin" class="card-text text-center">Please Join</div>
+                                <div id="floralHost" class="card-text text-center">Host Name(s)</div>
+                                <div id="floralDate" class="card-text text-center">Event Date</div>
+                                <div id="floralTime" class="card-text text-center">Event Time</div>
+                                <div id="floralVenue" class="card-text text-center">Venue Name</div>
+                                <div id="floralStreet" class="card-text text-center">1234 Name St</div>
+                                <div id="floralCity" class="card-text text-center">City, ST 12345</div>
+                                <div id="floralMessage" class="card-text text-center">Custom Message</div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Sunny Side Invite -->
+                <div class="card" id="eggInvite" style="max-width: 450px; min-width: 300px;">
+                        <img src="sunnySideInvite.jpg" class="card-img" alt="egg invitation">
+                        <div class="card-img-overlay">
+                            <div contenteditable="true" id="eggTextDiv" style="width: 100%; height: 40%;">
+                                <div id="eggJoin" class="card-text text-center">Please Join</div>
+                                <div id="eggHost" class="card-text text-center">Host Name(s)</div>
+                                <div id="eggDate" class="card-text text-center">Event Date</div>
+                                <div id="eggTime" class="card-text text-center">Event Time</div>
+                                <div id="eggVenue" class="card-text text-center">Venue Name</div>
+                                <div id="eggStreet" class="card-text text-center">1234 Name St</div>
+                                <div id="eggCity" class="card-text text-center">City, ST 12345</div>
+                                <div id="eggMessage" class="card-text text-center">Custom Message</div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Foodie Invite -->
+                <div class="card" id="foodInvite" style="max-width: 450px; min-width: 300px;">
+                        <img src="foodInvite.jpg" class="card-img" alt="food invitation">
+                        <div class="card-img-overlay">
+                            <div contenteditable="true" id="foodTextDiv" style="width: 100%; height: 40%;">
+                                <div id="foodJoin" class="card-text text-center">Please Join</div>
+                                <div id="foodHost" class="card-text text-center">Host Name(s)</div>
+                                <div id="foodDate" class="card-text text-center">Event Date</div>
+                                <div id="foodTime" class="card-text text-center">Event Time</div>
+                                <div id="foodVenue" class="card-text text-center">Venue Name</div>
+                                <div id="foodStreet" class="card-text text-center">1234 Name St</div>
+                                <div id="foodCity" class="card-text text-center">City, ST 12345</div>
+                                <div id="foodMessage" class="card-text text-center">Custom Message</div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Bubbly Invite -->
+                <div class="card" id="bubblyInvite" style="max-width: 450px; min-width: 300px;">
+                        <img src="bubblyInvite.jpg" class="card-img" alt="bubbly invitation">
+                        <div class="card-img-overlay">
+                            <div contenteditable="true" id="bubblyTextDiv" style="width: 100%; height: 40%;">
+                                <div id="bubblyJoin" class="card-text text-center">Please Join</div>
+                                <div id="bubblyHost" class="card-text text-center">Host Name(s)</div>
+                                <div id="bubblyDate" class="card-text text-center">Event Date</div>
+                                <div id="bubblyTime" class="card-text text-center">Event Time</div>
+                                <div id="bubblyVenue" class="card-text text-center">Venue Name</div>
+                                <div id="bubblyStreet" class="card-text text-center">1234 Name St</div>
+                                <div id="bubblyCity" class="card-text text-center">City, ST 12345</div>
+                                <div id="bubblyMessage" class="card-text text-center">Custom Message</div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+            <!-- Download Or Share -->
+            <div class="col-md-3 col-sm-12">
+                <!--Card With Title and Download/Share Buttons-->
+
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
+
+<!-- GrabzIt API -->
+<!-- API Key: ODNkNjJmNzIxYTgxNGY5MGI4OTc0MmMyMjc5YzIzNmQ= -->
+<!-- Application Secret: Pz8/Pz8xPz8/P3g/Kz9/P1NiPz8/Bjs/CSQ9eT8ePz8= -->
+
+
+<!-- S3 code -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@grabzit/js@3.3.0/grabzit.min.js"></script>
+<script>
+
+GrabzIt("Sign in to view your Application Key").ConvertURL("http://www.google.com", 
+{"onfinish": function (id){
+	alert(id);
+}, 
+"export":"s3://AKIAI4LKFM7BW246MNRA= :OzN3fgxCEzTaaObztAsOnDVkKRDp5U+iobfCSA9V@us-east-2/babesinbrunchland"}).Create();
+</script> -->

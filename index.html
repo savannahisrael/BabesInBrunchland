@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="shortcut icon" href="assets/images/train-icon.png"> -->
+    <title>Brunch for Babes</title>
+    <!-- CSS Reset -->
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <!-- jQuery -->
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&callback=initMap">
+        </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+
+</head>
+
+
+<body>
+    <header>
+        <div class="jumbotron jumbotron-fluid" id="brunch-header">
+            <!-- <img src="images/Header.png" class="img-fluid" width="100%"> -->
+            <h1><strong>Babes In Brunchland</strong></h1>
+        </div>
+    </header>
+
+    </div class="container" id="mainContent">
+    <!-- Modal with Large Results -->
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="resultsModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Get That Brunch</h5>
+                    <button type="button bellhop" class="close" data-dismiss="modal" aria-label="Close">
+
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+
+
+
+                        <!-- Restaurant 1 Large -->
+                        <div class="card mb-3 center" id="r1CardLarge">
+                            <div class="row no-gutters">
+                                <div class="col-md-4" id="r1Img">
+                                </div>
+                                <div class="col-md-8 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h2 class="card-title" id="r1Name"></h2>
+                                        <h4 id="r1Rating">Rating</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-md-7 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h4 id="r1Street">1234 Street Name</h4>
+                                        <h4 id="r1City">City, St, Zipcode</h4>
+                                        <br>
+                                        <br>
+                                        <h4 id="r1Phone">(123) 456-7891</h4><br>
+                                        <a class="btn btn-primary" href="./Invite1/customInvite.html" target="_blank"
+                                            role="button" id="r1InviteButton">Make An Invite</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Restaurant 2 Large -->
+                        <div class="card mb-3 center" id="r2CardLarge">
+                            <div class="row no-gutters">
+                                <div class="col-md-4" id="r2Img">
+                                </div>
+                                <div class="col-md-8 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h2 class="card-title" id="r2Name"></h2>
+                                        <h4 id="r2Rating">Rating</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col-md-7 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h4 id="r2Street">1234 Street Name</h4>
+                                        <h4 id="r2City">City, St, Zipcode</h4>
+                                        <br>
+                                        <br>
+                                        <h4 id="r2Phone">(123) 456-7891</h4><br>
+                                        <a class="btn btn-primary" href="./Invite1/customInvite.html" target="_blank"
+                                            role="button" id="r2InviteButton">Make An Invite</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Restaurant 3 Large -->
+                        <div class="card mb-3 center" id="r3CardLarge">
+                            <div class="row no-gutters">
+                                <div class="col-md-4" id="r3Img">
+                                </div>
+                                <div class="col-md-8 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h2 class="card-title" id="r3Name">Restaurant 3 Name</h2>
+                                        <h4 id="r3Rating">Rating</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+
+                                <div class="col-md-7 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h4 id="r3Street">1234 Street Name</h4>
+                                        <h4 id="r3City">City, St, Zipcode</h4>
+                                        <br>
+                                        <br>
+                                        <h4 id="r3Phone">(123) 456-7891</h4><br>
+                                        <a class="btn btn-primary bellhop" href="./Invite1/customInvite.html"
+                                            target="_blank" role="button" id="r3InviteButton">Make An Invite</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5" id="r3Map">
+                            </div>
+                        </div>
+
+                        <!-- Restaurant 4 Large -->
+                        <div class="card mb-3 center" id="r4CardLarge">
+                            <div class="row no-gutters">
+                                <div class="col-md-4" id="r4Img">
+                                </div>
+                                <div class="col-md-8 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h2 class="card-title" id="r4Name">Restaurant 4 Name</h2>
+                                        <h4 id="r4Rating">Rating</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+
+                                <div class="col-md-7 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h4 id="r4Street">1234 Street Name</h4>
+                                        <h4 id="r4City">City, St, Zipcode</h4>
+                                        <br>
+                                        <br>
+                                        <h4 id="r4Phone">(123) 456-7891</h4><br>
+                                        <a class="btn btn-primary bellhop" href="./Invite1/customInvite.html"
+                                            target="_blank" role="button" id="r4InviteButton">Make An Invite</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5" id="r4Map">
+                            </div>
+                        </div>
+
+
+                        <!-- Restaurant 5 Large -->
+                        <div class="card mb-3 center" id="r5CardLarge">
+                            <div class="row no-gutters">
+                                <div class="col-md-4" id="r5Img">
+                                </div>
+                                <div class="col-md-8 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h2 class="card-title" id="r5Name">Restaurant 5 Name</h2>
+                                        <h4 id="r5Rating">Rating</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+
+                                <div class="col-md-7 text-center">
+                                    <div class="card-body">
+                                        <br>
+                                        <h4 id="r5Street">1234 Street Name</h4>
+                                        <h4 id="r5City">City, St, Zipcode</h4>
+                                        <br>
+                                        <br>
+                                        <h4 id="r5Phone">(123) 456-7891</h4><br>
+                                        <a class="btn btn-primary bellhop" href="./Invite1/customInvite.html"
+                                            target="_blank" role="button" id="r5InviteButton">Make An Invite</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-5" id="r5Map">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary bellhop" id="close"
+                        data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- User Input Form -->
+    <div class="container" id="inputFormWrap">
+        <div class="row">
+            <div class="col-lg-12">
+                <form id="firstForm">
+                    <div class="form-group text-center">
+                        <label for="exampleFormControlInput1">Zip Code</label>
+                        <input type="number" class="form-control" id="zip" placeholder="80109">
+                    </div>
+                    <div class="form-group text-center">
+                        <label for="exampleFormControlSelect1">Price Point</label>
+                        <select class="form-control" id="pricePoint">
+                            <option id="lowPrice">$</option>
+                            <option id="midPrice">$$</option>
+                            <option id="highPrice">$$$</option>
+                        </select>
+
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" id="submit" class="btn btn-primary center-block">Find Me
+                            Brekkie!</button>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Results Small -->
+    <div class="container" id="resultsWrap">
+
+        <!-- Restaurant 1 Small -->
+        <div class="card mb-3 center" id="r1CardSmall">
+            <div class="row no-gutters">
+                <div class="col-md-4" id="r1Img">
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="card-body text-center">
+                        <br>
+                        <h2 class="card-title" id="r1Name">Restaurant 1 Name</h2><br>
+
+                        <button type="button" class="btn btn-primary bellhop" data-toggle="modal"
+                            data-target="#resultsModal" id="r1ButtonMore">Tell Me More</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Restaurant 2 Small -->
+        <div class="card mb-3 center" id="r2CardSmall">
+            <div class="row no-gutters">
+                <div class="col-md-4" id="r2Img">
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="card-body">
+                        <br>
+                        <h2 class="card-title" id="r2Name">Restaurant 2 Name</h2><br>
+
+                        <button type="button" class="btn btn-primary bellhop" data-toggle="modal"
+                            data-target="#resultsModal" id="r2ButtonMore">Tell Me More</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Restaurant 3 Small -->
+        <div class="card mb-3 center" id="r3CardSmall">
+            <div class="row no-gutters">
+                <div class="col-md-4" id="r3Img">
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="card-body">
+                        <br>
+                        <h2 class="card-title" id="r3Name">Restaurant 3 Name</h2><br>
+                        <button type="button" class="btn btn-primary bellhop" data-toggle="modal"
+                            data-target="#resultsModal" id="r3ButtonMore">Tell Me More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 4 Small -->
+        <div class="card mb-3 center" id="r4CardSmall">
+            <div class="row no-gutters">
+                <div class="col-md-4" id="r4Img">
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="card-body">
+                        <br>
+                        <h2 class="card-title" id="r4Name">Restaurant 4 Name</h2>
+                        <br>
+                        <button type="button" class="btn btn-primary bellhop" data-toggle="modal"
+                            data-target="#resultsModal" id="r4ButtonMore">Tell Me More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Restaurant 5 Small -->
+        <div class="card mb-3 center" id="r5CardSmall">
+            <div class="row no-gutters">
+                <div class="col-md-4" id="r5Img">
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="card-body">
+                        <br>
+                        <h2 class="card-title" id="r5Name">Restaurant 5 Name
+                        </h2><br>
+                        <button type="button" class="btn btn-primary bellhop" data-toggle="modal"
+                            data-target="#resultsModal" id="r5ButtonMore">Tell Me More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div><button type="clear" id="clear" class="btn btn-primary center-block">Clear</button></div>
+
+    </div>
+
+
+
+    <!-- <script src="logic.js"></script> -->
+    <!-- <script src="playground.js"></script> -->
+
+    <!-- <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&callback=initMap">
+            </script> -->
+
+
+</body>
+
+</html>

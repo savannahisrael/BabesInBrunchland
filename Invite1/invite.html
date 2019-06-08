@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="inviteStyle.css">
+</head>
+
+
+<body>
+    <h1>Create Your Invite</h1>
+
+
+    <!-- Floral Invite -->
+    <div class="card" id="floralInvite" style="max-width: 600px; min-width: 300px;">
+        <img src="floralInvite.png" class="card-img" alt="floral invitation">
+        <div class="card-img-overlay">
+            <h5 class="card-title text-center" id="floralHost">Please Join <span id="hostName">Host Name(s)</span> for
+            </h5>
+            <p class="card-text text-center" id="floralWhen"><span id="eventDate">Event Date</span> at <span
+                    id="eventTime">Event Time</span></p>
+            <p class="card-text text-center" id="floralWhere"><span id="location">Location Name</span><br><span
+                    id="address">1234 Address St<br>City, State, Zipcode</span></p>
+            <p class="card-text text-center" id="floralMessage"><span id="customMessage">Your Custom Message Here</span>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Foodie Invite -->
+    <div class="card" id="foodieInvite" style="max-width: 400px">
+        <img src="foodieInvite.png" class="card-img" alt="foodie invitation">
+        <div class="card-img-overlay">
+            <h6 class="card-title text-center" id="foodieHost">Come Join <span id="hostNameFoodie">Host Name(s)</span>
+            </h6>
+            <p class="card-text text-center" id="foodieWhen"><span id="eventDateFoodie">Event Date</span> at <span
+                    id="eventTimeFoodie">Event Time</span></p>
+            <p class="card-text text-center" id="foodieWhere"><span id="location">Location Name</span><br><span
+                    id="address">1234 Address St<br>City, State, Zipcode</span></p>
+            <p class="card-text text-center" id="foodieMessage"><span id="customMessageFoodie">Your Custom Message
+                    Here</span>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Modern Invite -->
+    <div class="card" id="modernInvite" style="max-width: 400px">
+        <img src="modernInvite.png" class="card-img" alt="modern invitation">
+        <div class="card-img-overlay">
+            <h6 class="card-title text-center" id="modernHost">Please Join <span id="hostNameModern">Host Name(s)</span>
+                For</h6>
+            <p class="card-text text-center" id="modernWhen"><span id="eventDateModern">Event Date</span> at <span
+                    id="eventTimeModern">Event Time</span></p>
+            <p class="card-text text-center" id="modernWhere"><span id="location">Location Name</span><br><span
+                    id="address">1234 Address St<br>City, State, Zipcode</span></p>
+            <p class="card-text text-center" id="modernMessage"><span id="customMessageModern">Your Custom Message
+                    Here</span>
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bloody Invite -->
+    <div class="card" id="bloodyInvite" style="max-width: 400px">
+        <img src="bloodyInvite.png" class="card-img" alt="modern invitation">
+        <div class="card-img-overlay">
+            <h6 class="card-title text-center" id="bloodyHost">Please Join <span id="hostNameBloody">Host Name(s)</span>
+                For</h6>
+            <p class="card-text text-center" id="bloodyWhen"><span id="eventDateBloody">Event Date</span> at <span
+                    id="eventTimeBloody">Event Time</span></p>
+            <p class="card-text text-center" id="bloodyWhere"><span id="location">Location Name</span><br><span
+                    id="address">1234 Address St<br>City, State, Zipcode</span></p>
+            <p class="card-text text-center" id="bloodyMessage"><span id="customMessageBloody">Your Custom Message
+                    Here</span>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Bubbly Invite -->
+    <div class="card" id="bubblyInvite" style="max-width: 600px; min-width: 300px;">
+            <img src="bubblyInvite.png" class="card-img" alt="bubbly invitation">
+            <div class="card-img-overlay">
+                <h5 class="card-title text-center" id="bubblyHost">Please Join <span id="hostNameBubbly">Host Name(s)</span> for
+                </h5>
+                <p class="card-text text-center" id="bubblyWhen"><span id="eventDateBubbly">Event Date</span> at <span
+                        id="eventTimeBubbly">Event Time</span></p>
+                <p class="card-text text-center" id="bubblyWhere"><span id="location">Location Name</span><br><span
+                        id="address">1234 Address St<br>City, State, Zipcode</span></p>
+                <p class="card-text text-center" id="bubblyMessage"><span id="customMessageBubbly">Your Custom Message Here</span>
+                </p>
+            </div>
+        </div>
+
+
+    <br><br>
+
+
+
+
+    <!-- Invite Style Card Group -->
+    <div class="card-group">
+        <!-- Floral -->
+        <div class="card" style="max-width: 10%">
+            <img src="floralInvite.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" id="floralButton">Floral</button>
+            </div>
+        </div>
+        <!-- Foodie -->
+        <div class="card" style="max-width: 10%">
+            <img src="foodieInvite.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" id="foodieButton">Foodie</button>
+            </div>
+        </div>
+        <!-- Modern -->
+        <div class="card" style="max-width: 10%">
+            <img src="modernInvite.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary" id="modernButton">Modern</button>
+            </div>
+        </div>
+
+
+        <!-- Bloody -->
+        <div class="card" style="max-width: 10%">
+                <img src="bloodyInvite.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary" id="bloodyButton">Mary</button>
+                </div>
+            </div>
+
+
+        <!-- Bubbly -->
+        <div class="card" style="max-width: 10%">
+                <img src="bubblyInvite.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary" id="bubblyButton">Bubbly</button>
+                </div>
+            </div>
+
+
+    </div>
+    <br><br>
+
+
+    <!-- Invite Form -->
+    <form id="inviteFORM">
+        <div class="form-group">
+            <label for="hostNameForm">Host Name</label>
+            <input type="text" class="form-control" id="hostNameForm" placeholder="Host Name(s)">
+        </div>
+        <div class="form-group">
+            <label for="eventDateForm">Event Date</label>
+            <input type="text" class="form-control" id="eventDateForm" placeholder="Day Month DD YYYY">
+        </div>
+        <div class="form-group">
+            <label for="eventTimeForm">Event Time</label>
+            <input type="text" class="form-control" id="eventTimeForm" placeholder="HH:MM AM/PM">
+        </div>
+        <div class="form-group">
+            <label for="customMessageForm">Custom Message</label>
+            <textarea class="form-control" id="customMessageForm" rows="3"></textarea>
+        </div>
+        <button class="btn-success" id="submit">Customize Invite<span></span></button>
+    </form>
+
+
+    <script type="text/javascript" src="./invite.js"></script>
+</body>
+
+</html>
