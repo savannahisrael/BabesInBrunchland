@@ -59,66 +59,6 @@ form {
     color: black;
 }
 
-/* #r1ButtonMore:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r2ButtonMore:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r3ButtonMore:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r4ButtonMore:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r5ButtonMore:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r1InviteButton:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r2InviteButton:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r3InviteButton:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r4InviteButton:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-}
-
-#r5InviteButton:hover {
-    cursor: url("images/mouse-glass.png"), default !important;
-    background-color: palevioletred;
-    color: black;
-} */
-
 #close:hover {
     cursor: url("../images/mouse-glass.png"), default !important;
     background-color: palevioletred;
@@ -200,3 +140,5 @@ h3.alert-msg {
     font-size: 3em;
     font-weight: 300;
 }
+
+
