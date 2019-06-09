@@ -13,7 +13,7 @@
     <!-- Bootstrap -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-  
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cyborg/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -92,6 +92,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5" id="map"></div>
+
                             </div>
                         </div>
                     </div>
@@ -137,7 +138,7 @@
     <!-- Results Small -->
     <div class="container" id="resultsWrap">
 
-        <div><button type="clear" id="clear" class="btn btn-primary center-block">Clear</button></div>
+        <div><button type="clear" value="Clear" id="resetBtn" class="btn btn-primary center-block">Clear</button></div>
 
     </div>
 
@@ -145,10 +146,11 @@
 
     <script src="assets/js/logic.js"></script>
 
-    <script async defer
+    <!-- <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&callback=initMap">
-    </script>
-
+    </script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&callback=initMap"
+        async defer></script>
 
 </body>
 
