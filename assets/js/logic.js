@@ -87,7 +87,10 @@ $("#submitSearch").on("click", function (event) {
 
                 } else {
                     $(".alert-msg").text("")
+
                     $(".alert-msg").text("Sorry, no brunch for you")
+
+
                     $("#alert").removeClass("hide");
                 }
 
