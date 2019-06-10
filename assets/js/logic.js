@@ -87,7 +87,7 @@ $("#submitSearch").on("click", function (event) {
 
                 } else {
                     $(".alert-msg").text("")
-                    $(".alert-msg").text("sorry no brunch for you.")
+                    $(".alert-msg").text("Sorry, no brunch for you.")
                     $("#alert").removeClass("hide");
                 }
 
@@ -95,7 +95,7 @@ $("#submitSearch").on("click", function (event) {
         } else {
             $("#loader").addClass("hide");
             $(".alert-msg").text("")
-            $(".alert-msg").text("sorry there was an issue with the zipcode provided. Please check the input and try again.")
+            $(".alert-msg").text("Sorry, there was an issue with the zipcode provided. Please check the input and try again.")
             $("#alert").removeClass("hide");
         }
     });
@@ -105,7 +105,7 @@ $("#submitSearch").on("click", function (event) {
 
 function createBrunchHTML(pricePointFilter, pricePoint) {
 
-  var clearBtn = $("<button>").attr("id", "clear").addClass("btn btn-primary center-block").text("Dynamic Clear")
+  var clearBtn = $("<button>").attr("id", "clear").addClass("btn btn-primary bellhop center-block").text("Clear")
   $("#resultsWrap").append(clearBtn);
 
     pricePointFilter.forEach(function (result, i) {
