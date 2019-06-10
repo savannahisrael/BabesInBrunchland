@@ -5,6 +5,8 @@ clickSound.setAttribute("src", "assets/audio/shooting-star.mp3");
 var filteredPriceLow;
 var filteredPriceMid;
 var filteredPriceHigh;
+var inviteBrunchSpotName;
+var inviteBrunchSpotAddress;
 
 $("#resultsWrap").addClass("hide");
 
@@ -89,7 +91,6 @@ $("#submitSearch").on("click", function (event) {
                     $("#alert").removeClass("hide");
                 }
 
-
             });
         } else {
             $("#loader").addClass("hide");
@@ -121,8 +122,10 @@ function createBrunchHTML(pricePointFilter, pricePoint) {
 
         var col2 = $("<div>").addClass("col-md-4 text-center")
         var content = $("<div>").addClass("card-body");
-        var h2 = $("<h2>").addClass("card-title").attr("id", "brunchName-" + i).text(brunchSpotName);
-        var btn = $("<button>").attr("type", "button").addClass("btn btn-primary bellhop").attr("data-index", i).attr("id", "ButtonMore-" + i).attr("data-price", pricePoint).text("Tell Me More")
+
+        var h2 = $("<h2>").addClass("card-title").attr("id", "brunchName-"+i).text(brunchSpotName);
+        var btn = $("<button>").attr("type", "button").addClass("btn btn-primary bellhop buttonMore").attr("data-index", i).attr("id", "ButtonMore-"+i).attr("data-price", pricePoint).text("Tell Me More")
+
         $(content).append(h2, btn)
         $(col2).append(content);
 
@@ -149,13 +152,18 @@ $("#alert-btn").click(function () {
     $(".alert-msg").text("")
 })
 
-$(document).on("click", ".bellhop", function () {
-    var index = parseInt($(this).data("index"));
+
+$(document).on("click", ".buttonMore", function(){
+    var index =  parseInt($(this).data("index"));
     var pricePoint = $(this).data("price");
+    $("#inviteFormWrap").addClass("hide");
+    $("#inviteWrap").addClass("hide");
+
 
 
     if (pricePoint === "filteredPriceLow") {
         var result = filteredPriceLow[index];
+        console.log(index);
 
         var brunchSpotName = result.restaurant.name;
         $("#rName").html(brunchSpotName);
@@ -176,7 +184,12 @@ $(document).on("click", ".bellhop", function () {
 
 
         initMap(restLat, restLng);
-        $("#resultsModal").modal("show");
+        
+        $("#resultsModal").modal("show")
+        
+    
+
+
 
     } else if (pricePoint === "filteredPriceMid") {
         var result = filteredPriceMid[index];
@@ -196,10 +209,11 @@ $(document).on("click", ".bellhop", function () {
         var restLat = result.restaurant.location.latitude;
         var restLng = result.restaurant.location.longitude;
 
-
-
         initMap(restLat, restLng);
-        $("#resultsModal").modal("show");
+        $("#resultsModal").modal("show")
+
+
+     
     } else {
         (pricePoint === "filteredPriceHigh")
         var result = filteredPriceHigh[index];
@@ -219,7 +233,48 @@ $(document).on("click", ".bellhop", function () {
         var restLat = result.restaurant.location.latitude;
         var restLng = result.restaurant.location.longitude;
 
+
         initMap(restLat, restLng);
         $("#resultsModal").modal("show");
     }
+    inviteBrunchSpotName = brunchSpotName;
+    inviteBrunchSpotAddress = brunchSpotAddress;
+})
+
+$(document).on("click", ".buttonInvite", function() {
+    console.log(inviteBrunchSpotName);
+    console.log(inviteBrunchSpotAddress);
+
+    $("#resultsLarge").addClass("hide");
+    $("#inviteFormWrap").removeClass("hide")
+});
+
+$(document).on("click", ".modalClose", function() {
+    $("#resultsLarge").removeClass("hide");
+    $("#inviteFormWrap").addClass("hide");
+    $("#inviteWrap").addClass("hide")
+});
+
+$(document).on("click", ".submitInvite", function() {
+    $("#resultsLarge").addClass("hide");
+    $("#inviteFormWrap").addClass("hide");
+    $("#inviteWrap").removeClass("hide");
+    
+    var hostName = $("#hostName").val().trim();
+    var eventDate = $("#eventDate").val().trim();
+    var eventTime = $("#eventTime").val().trim();
+    var customMessage = $("#customMessage").val().trim();
+
+    console.log(inviteBrunchSpotName);
+    console.log(inviteBrunchSpotAddress);
+    console.log(hostName);
+    console.log(eventDate);
+    console.log(eventTime);
+    console.log(customMessage);
+
+    $(".hostNamePrint").html(hostName);
+    $(".eventDatePrint").html(eventDate + "at" + eventTime);
+    $(".venueNamePrint").html(inviteBrunchSpotName);
+    $(".venueAddressPrint").html(inviteBrunchSpotAddress);
+    $(".customMessagePrint").html(customMessage);
 });
