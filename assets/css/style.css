@@ -160,6 +160,23 @@ h3.alert-msg {
     
 }
 
+.white {
+    color: whitesmoke;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.black {
+    color: black;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.fancy {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 150%;
+    font-weight: bold;
+
+}
+
 @media only screen and (max-width: 980px) {
     .jumbotron {
       height: 300px;

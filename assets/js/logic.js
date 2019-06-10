@@ -87,7 +87,10 @@ $("#submitSearch").on("click", function (event) {
 
                 } else {
                     $(".alert-msg").text("")
-                    $(".alert-msg").text("Sorry, no brunch for you.")
+
+                    $(".alert-msg").text("Sorry, no brunch for you")
+
+
                     $("#alert").removeClass("hide");
                 }
 
@@ -257,12 +260,18 @@ $(document).on("click", ".modalClose", function() {
 
 $(document).on("click", "#bubblyButton", function() {
     $("#inviteBackground").attr("src", "https://i.pinimg.com/564x/02/de/85/02de8582b278ecfc14d9c1a45508e3e4.jpg");
+    $("#inviteTextDiv").removeClass("black");
+    $("#inviteTextDiv").addClass("white");
 });
 $(document).on("click", "#eggButton", function() {
     $("#inviteBackground").attr("src", "https://i.pinimg.com/564x/23/ad/f0/23adf058de303e77b35df2fb80f78877.jpg");
+    $("#inviteTextDiv").removeClass("white");
+    $("#inviteTextDiv").addClass("black");
 });
 $(document).on("click", "#floralButton", function() {
     $("#inviteBackground").attr("src", "https://i.pinimg.com/564x/53/c3/6a/53c36a20c23568942e55d5874836291c.jpg");
+    $("#inviteTextDiv").removeClass("white");
+    $("#inviteTextDiv").addClass("black");
 });
 
 $(document).on("click", ".submitInvite", function() {
