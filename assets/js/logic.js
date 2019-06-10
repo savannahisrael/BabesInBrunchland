@@ -57,7 +57,7 @@ $("#submitSearch").on("click", function (event) {
             //ajax call to the zomato api, plugging in values fo lat and long
 
             $.ajax({
-                url: "http://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?q=brunch&lat=" + lat + "&lon=" + lng + "&apikey=527733933cfc51b0f78491172626a1a3&count=all",
+                url: "https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?q=brunch&lat=" + lat + "&lon=" + lng + "&apikey=527733933cfc51b0f78491172626a1a3&count=all",
                 method: "POST",
             }).then(function (response) {
                 console.log(response)
@@ -158,6 +158,7 @@ $(document).on("click", ".buttonMore", function(){
     var pricePoint = $(this).data("price");
     $("#inviteFormWrap").addClass("hide");
     $("#inviteWrap").addClass("hide");
+  
 
 
 
@@ -242,9 +243,6 @@ $(document).on("click", ".buttonMore", function(){
 })
 
 $(document).on("click", ".buttonInvite", function() {
-    console.log(inviteBrunchSpotName);
-    console.log(inviteBrunchSpotAddress);
-
     $("#resultsLarge").addClass("hide");
     $("#inviteFormWrap").removeClass("hide")
 });
@@ -252,29 +250,49 @@ $(document).on("click", ".buttonInvite", function() {
 $(document).on("click", ".modalClose", function() {
     $("#resultsLarge").removeClass("hide");
     $("#inviteFormWrap").addClass("hide");
-    $("#inviteWrap").addClass("hide")
+    $("#inviteWrap").addClass("hide");
+    $("#downloadMessage").addClass("hide");
+    
+});
+
+$(document).on("click", "#bubblyButton", function() {
+    $("#inviteBackground").attr("src", "https://i.pinimg.com/564x/02/de/85/02de8582b278ecfc14d9c1a45508e3e4.jpg");
+});
+$(document).on("click", "#eggButton", function() {
+    $("#inviteBackground").attr("src", "https://i.pinimg.com/564x/23/ad/f0/23adf058de303e77b35df2fb80f78877.jpg");
+});
+$(document).on("click", "#floralButton", function() {
+    $("#inviteBackground").attr("src", "https://i.pinimg.com/564x/53/c3/6a/53c36a20c23568942e55d5874836291c.jpg");
 });
 
 $(document).on("click", ".submitInvite", function() {
-    $("#resultsLarge").addClass("hide");
     $("#inviteFormWrap").addClass("hide");
     $("#inviteWrap").removeClass("hide");
-    
+
     var hostName = $("#hostName").val().trim();
     var eventDate = $("#eventDate").val().trim();
     var eventTime = $("#eventTime").val().trim();
     var customMessage = $("#customMessage").val().trim();
-
-    console.log(inviteBrunchSpotName);
-    console.log(inviteBrunchSpotAddress);
-    console.log(hostName);
-    console.log(eventDate);
-    console.log(eventTime);
-    console.log(customMessage);
 
     $(".hostNamePrint").html(hostName);
     $(".eventDatePrint").html(eventDate + "at" + eventTime);
     $(".venueNamePrint").html(inviteBrunchSpotName);
     $(".venueAddressPrint").html(inviteBrunchSpotAddress);
     $(".customMessagePrint").html(customMessage);
+
 });
+
+$(document).on("click", ".editInviteButton", function() {
+    $("#inviteWrap").addClass("hide");
+    $("#inviteFormWrap").removeClass("hide");
+    $("#downloadMessage").addClass("hide");
+});
+
+$(document).on("click", ".saveInviteButton", function() {
+    $("#downloadMessage").html("Your Invite Will Automatically Download Soon").removeClass("hide");
+
+    GrabzIt("ODNkNjJmNzIxYTgxNGY5MGI4OTc0MmMyMjc5YzIzNmQ=").ConvertPage({"target": "#inviteImageDiv", "format": "png", "download": 1, "onfinish": function(id) {
+        $("#downloadMessage").html("Congrats!  Your Invite Has Downloaded!");
+    }}).Create();
+});
+
