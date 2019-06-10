@@ -32,6 +32,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@grabzit/js@3.3.0/grabzit.min.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
 
 </head>
 
@@ -45,16 +46,13 @@
         <img src="assets/images/loader.gif" alt="loading">
         <h3>Loading...</h3>
     </div>
-    <header>
-        <div class="jumbotron jumbotron-fluid" id="brunch-header">
-            <!-- <img src="images/Header.png" class="img-fluid" width="100%"> -->
-            <h1><strong>Babes In Brunchland</strong></h1>
-        </div>
-    </header>
 
-    </div class="container" id="mainContent">
+<!-- Header -->
+<div class="jumbotron jumbotron-fluid">
+          <h1>Babes In Brunchland</h1>
+</div>
     <!-- Modal with Large Results -->
-
+<div class="mainWrapper">
 
     <div class="modal" tabindex="-1" role="dialog" id="resultsModal">
             <div id="loader" class="hide">
@@ -65,7 +63,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Get That Brunch</h5>
-                    <button type="button" class="close modalClose bellhop" data-dismiss="modal" aria-label="Close">
+                    <button type="button bellhop" class="close modalClose" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -101,8 +99,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
 
                     <!-- Invite Form -->
                     <div class="container" id="inviteFormWrap">
@@ -110,15 +106,15 @@
                         <div class="container text-center" id="styleButtonWrap">
                             <label class="text-center" for="styleButtons">Choose A Style</label>
                             <div class="row" id="styleButtons">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <button class="btn btn-primary" id="bubblyButton" type="submit"><img
                                             src="./assets/images/bubblyInvite.jpg" alt="bubbly style"
                                             class="img-thumbnail float-left"></button></div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <button class="btn btn-primary" id="eggButton" type="submit"><img
                                             src="./assets/images/sunnySideInvite.jpg" alt="egg style"
                                             class="img-thumbnail"></button></div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <button class="btn btn-primary" id="floralButton" type="submit"><img
                                             src="./assets/images/floralInvite.jpg" alt="floral style"
                                             class="img-thumbnail float-right"></button></div>
@@ -153,16 +149,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer text-center">
 
-                        div class="modal-footer">
-                       <button type="button" class="btn btn-secondary bellhop modalClose" id="close"
-                           data-dismiss="modal">Close</button>
-                   </div>
-               </div>
-           </div>
-       </div>
-   
 
                     <!-- Invite Image -->
                     <div class="container" id="inviteWrap">
@@ -174,7 +161,7 @@
                                 <div id="inviteTextDiv" style="width: 100%; height: 40%;">
                                     <div id="join" class="card-text text-center">Please Join</div>
                                     <div id="host" class="card-text text-center hostNamePrint">Host Name(s)</div>
-                                    <div id="dateTime" class="card-text text-center eventDatePrint">Event Date Time>
+                                    <div id="dateTime" class="card-text text-center eventDatePrint">Event Date at Time
                                     </div>
                                     <div id="venue" class="card-text text-center venueNamePrint">Venue Name</div>
                                     <div id="address" class="card-text text-center venueAddressPrint">1234 Name St</div>
@@ -237,7 +224,7 @@
 
     </div>
 
-
+</div>
 
     <script src="assets/js/logic.js"></script>
 
@@ -245,6 +232,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&callback=initMap">
         </script>
     <script src="https://cdn.jsdelivr.net/npm/@grabzit/js@3.3.0/grabzit.min.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
 
 
 </body>

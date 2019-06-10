@@ -275,7 +275,7 @@ $(document).on("click", ".submitInvite", function() {
     var customMessage = $("#customMessage").val().trim();
 
     $(".hostNamePrint").html(hostName);
-    $(".eventDatePrint").html(eventDate + "at" + eventTime);
+    $(".eventDatePrint").html(eventDate + " at " + eventTime);
     $(".venueNamePrint").html(inviteBrunchSpotName);
     $(".venueAddressPrint").html(inviteBrunchSpotAddress);
     $(".customMessagePrint").html(customMessage);
