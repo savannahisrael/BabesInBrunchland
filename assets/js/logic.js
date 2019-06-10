@@ -11,6 +11,7 @@ $("#resultsWrap").addClass("hide");
 function initMap(restLat, restLng) {
     console.log(restLat);
     console.log(restLng);
+
     restLat = parseFloat(restLat);
     restLng = parseFloat(restLng);
     var myLatLng = { lat: restLat, lng: restLng };
@@ -30,7 +31,7 @@ function initMap(restLat, restLng) {
 
 $("#submitSearch").on("click", function (event) {
     event.preventDefault();
-    $("#firstForm").addClass("hide");
+    $("#firstForm").toggle();
     console.log("click")
 
 
@@ -103,6 +104,9 @@ $("#submitSearch").on("click", function (event) {
 
 function createBrunchHTML(pricePointFilter, pricePoint) {
 
+  var clearBtn = $("<button>").attr("id", "clear").addClass("btn btn-primary center-block").text("Dynamic Clear")
+  $("#resultsWrap").append(clearBtn);
+
     pricePointFilter.forEach(function (result, i) {
         var brunchSpotName = result.restaurant.name;
         var brunchSpotImage = result.restaurant.thumb;
@@ -126,17 +130,17 @@ function createBrunchHTML(pricePointFilter, pricePoint) {
 
         $(brunchWrap).append(row)
 
+
         $("#resultsWrap").append(brunchWrap);
-        $("#resultsWrap").slideDown('slow')
+        $("#resultsWrap").slideDown('slow');
     });
 
 }
 
-// $("#resetBtn").on("click", function(event) {
-//     $("#firstForm").removeClass("hide");
-//     $("#resultsWrap").addClass("hide");
-
-//   })
+$("#resultsWrap").on("click", "#clear" , function(event) {
+  $("#resultsWrap").empty()
+  $("#firstForm").toggle();
+  })
 
 
 
