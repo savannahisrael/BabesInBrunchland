@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@grabzit/js@3.3.0/grabzit.min.js"></script>
 
 </head>
 
@@ -57,6 +57,10 @@
 
 
     <div class="modal" tabindex="-1" role="dialog" id="resultsModal">
+            <div id="loader" class="hide">
+                    <img src="assets/images/loader.gif" alt="loading">
+                    <h3>Loading...</h3>
+                </div>
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -67,7 +71,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <!-- Restaurant 1 Large -->
+
+                        <!-- Results Large -->
                         <div class="card mb-3 center" id="resultsLarge">
                             <div class="row no-gutters">
                                 <img class="col-md-4" id="rImg"></img>
@@ -87,8 +92,6 @@
                                         <h4 id="rCity"></h4>
                                         <br>
                                         <br>
-                                        <!-- <a class="btn btn-primary buttonInvite" href="./Invite1/customInvite.html" target="_blank"
-                                            role="button" id="r1InviteButton">Make An Invite</a> -->
                                         <button type="button"
                                             class="btn btn-primary center-block bellhop buttonInvite">Make An
                                             Invite</button>
@@ -98,7 +101,28 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Invite Form -->
                     <div class="container" id="inviteFormWrap">
+                        <!-- Choose Style Buttons -->
+                        <div class="container text-center" id="styleButtonWrap">
+                            <label class="text-center" for="styleButtons">Choose A Style</label>
+                            <div class="row" id="styleButtons">
+                                <div class="col-md-4">
+                                    <button class="btn btn-primary" id="bubblyButton" type="submit"><img
+                                            src="./assets/images/bubblyInvite.jpg" alt="bubbly style"
+                                            class="img-thumbnail float-left"></button></div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-primary" id="eggButton" type="submit"><img
+                                            src="./assets/images/sunnySideInvite.jpg" alt="egg style"
+                                            class="img-thumbnail"></button></div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-primary" id="floralButton" type="submit"><img
+                                            src="./assets/images/floralInvite.jpg" alt="floral style"
+                                            class="img-thumbnail float-right"></button></div>
+                            </div>
+                        </div>
+                        <!-- Custom Invite Form -->
                         <form id="inviteForm">
                             <div class="form-group text-center">
                                 <label for="hostName">Host Name(s)</label>
@@ -122,43 +146,43 @@
 
                             <div class="text-center">
                                 <button type="button" id="submitInvite"
-                                    class="btn btn-primary center-block submitInvite">Get Your Invite</button>
+                                    class="btn btn-primary center-block bellhop submitInvite">Preview Your Invite</button>
                                 <br>
                             </div>
                         </form>
                     </div>
 
+
+                    <!-- Invite Image -->
                     <div class="container" id="inviteWrap">
-                        <div class="card" id="floralInvite" style="max-width: 450px; min-width: 300px;">
-                            <img src="./assets/images/floralInvite.png" class="card-img" alt="floral invitation">
+
+                        <div class="card" id="inviteImageDiv" style="max-width: 450px; min-width: 300px;">
+                            <img id="inviteBackground" src="./assets/images/floralInvite.jpg" class="card-img"
+                                alt="floral invitation">
                             <div class="card-img-overlay">
-                                <div id="floralTextDiv" style="width: 100%; height: 40%;">
-                                    <div id="floralJoin" class="card-text text-center">Please Join</div>
-                                    <div id="floralHost" class="card-text text-center hostNamePrint">Host Name(s)</div>
-                                    <div id="floralDateTime" class="card-text text-center eventDatePrint">Event Date Time></div>
-                                    <div id="floralVenue" class="card-text text-center venueNamePrint">Venue Name</div>
-                                    <div id="floralAddress" class="card-text text-center venueAddressPrint">1234 Name St</div>
-                                    <div id="floralMessage" class="card-text text-center customMessagePrint">Custom Message</div>
+                                <div id="inviteTextDiv" style="width: 100%; height: 40%;">
+                                    <div id="join" class="card-text text-center">Please Join</div>
+                                    <div id="host" class="card-text text-center hostNamePrint">Host Name(s)</div>
+                                    <div id="dateTime" class="card-text text-center eventDatePrint">Event Date Time>
+                                    </div>
+                                    <div id="venue" class="card-text text-center venueNamePrint">Venue Name</div>
+                                    <div id="address" class="card-text text-center venueAddressPrint">1234 Name St</div>
+                                    <div id="message" class="card-text text-center customMessagePrint">Custom Message
+                                    </div>
                                     <br>
                                 </div>
                             </div>
                         </div>
-                        <div class="card" id="eggInvite" style="max-width: 450px; min-width: 300px;">
-                            <img src="./assets/images/sunnySideInvite.jpg" class="card-img" alt="egg invitation">
-                            <div class="card-img-overlay">
-                                <div id="eggTextDiv" style="width: 100%; height: 40%;">
-                                    <div id="eggJoin" class="card-text text-center">Please Join</div>
-                                    <div id="eggHost" class="card-text text-center hostNamePrint">Host Name(s)</div>
-                                    <div id="eggDateTime" class="card-text text-center eventDatePrint">Event Date Time></div>
-                                    <div id="eggVenue" class="card-text text-center venueNamePrint">Venue Name</div>
-                                    <div id="eggAddress" class="card-text text-center venueAddressPrint">1234 Name St</div>
-                                    <div id="eggMessage" class="card-text text-center customMessagePrint">Custom Message</div>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" id="downloadInvite"
-                        class="btn btn-primary center-block downloadInvite">Download Your Invite</button>
+                        <br><div id="downloadMessage"></div>
+                        <button type="button" id="editInviteButton"
+                        class="btn btn-primary center-block bellhop editInviteButton">Edit Invite</button>
+                        <button type="button" id="saveInviteButton"
+                        class="btn btn-primary center-block bellhop saveInviteButton">Save And Share</button>
+                        <div class="container" id="inviteInsertWrap"></div>
+                    </div>
+                    
+                    
+
                     </div>
 
                     <div class="modal-footer">
@@ -210,6 +234,7 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJdJBJ82riE78r65LwDdZ4RraI1bn2ES8&callback=initMap">
         </script>
+    <script src="https://cdn.jsdelivr.net/npm/@grabzit/js@3.3.0/grabzit.min.js"></script>
 
 
 </body>

@@ -161,6 +161,12 @@ form {
     font-size: 30px;
 }
 
+label {
+    font-family: 'Old Standard TT', serif;
+    font-size: 30px;
+    text-align: center;  
+}
+
 #resultsWrap {
     margin-top: 100px;
     width: 75%;
