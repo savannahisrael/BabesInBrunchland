@@ -31,10 +31,10 @@ Team Members:
 
 ~Get to know us ~
 
-- Rachael W 
+Rachael W 
 https://github.com/RachaelWhitefield
 
--Genevieve DePriest 
+Genevieve DePriest 
 https://github.com/gdepriest
 
 Savannah Irasel
